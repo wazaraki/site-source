@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wilman's Site | <%= @document.title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <%- @getBlock("meta").toHTML() %>
+  <%- @getBlock("styles").add(["/styles/style.css"]).toHTML() %>
+</head>
+<body>
+  <div class="wrapper">
+    <aside class="aside">
+
+      <header class="header">
+        <a href="/"><img src="images/avatar.png" alt="Wazaraki" class="avatar">
+        <h1 class="aside-name">Wazaraki</h1></a>
+        <span class="description"><em>Front-endô</em> - The path of the Front-end</span>
+      </header>
+
+      <nav class="nav">
+        <ul class="nav-menu">
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/projects.html">Projects</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </aside>
+
+    <div class="main">
+      <h1><%= @document.title %></h1>
+      <%- @content %>
+    </div>
+    <footer>Made with ❤ in Uruguay</footer>
+  </div>
+
+  <%- @getBlock("scripts").toHTML() %>
+</body>
+</html>

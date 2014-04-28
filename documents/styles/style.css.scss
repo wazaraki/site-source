@@ -1,0 +1,155 @@
+// Reset: http://necolas.github.com/normalize.css/
+@import 'normalize.css';
+
+
+// Site Color Palette
+// Based on Moment of Zen*
+// http://www.colourlovers.com/palette/2715769/Moment_Of_Zen*
+
+$amount: 10%;
+$zen: #56627C;
+$dark-zen: darken($zen, $amount);
+$zen-light: #61A0AB;
+$lightened-zen: lighten($zen-light, $amount);
+$floating-zen: #91BDB9;
+$green-zen: #C5D6BA;
+$beige-zen: #F9F0CB;
+$zen-gray: #e3e2e1;
+$photo_size: 192px;
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  color: #555;
+}
+
+body {
+  height: 100%;
+  line-height: 1.5;
+}
+
+p {
+  margin-bottom: 1.6rem;
+}
+
+a {
+  color: $zen-light;
+  text-decoration: none;
+  &:hover {
+    color: $lightened-zen;
+  }
+}
+
+.aside {
+  position: relative;
+  top: 0;
+  width: 100%;
+  color: lightgray;
+  text-align: center;
+  a {
+    color: $zen-gray;
+    text-decoration: none;
+  }
+  h1 {
+    font-size: 1.9rem;
+    margin: .5rem 0;
+    text-shadow: rgba(0,0,0,.5) 0 2px;
+  }
+}
+
+.header {
+  padding: 1.6rem 0;
+  background: $zen;
+  height: 13.5em;
+}
+
+.description {
+  font-size: 1.1rem;
+}
+
+.nav {
+  background: $zen-gray;
+  xbackground: $beige-zen;
+  color: $zen;
+}
+
+.avatar {
+  border-radius: 37.5%;
+  height: 48px;
+  width: 48px;
+}
+
+.nav-menu li {
+  display: inline-block;
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 1rem 1.2rem;
+  height: 4rem;
+}
+
+.nav-menu li a {
+  color: $zen;
+  text-decoration: none;
+  &:hover {
+    color: $dark-zen;
+  }
+}
+
+.main {
+  padding: 1.6rem 1.6rem 2rem;
+  font-size: 2rem;
+  min-height: 15.8rem;
+  margin: 0 auto;
+  &>p {
+    line-height: 1.6;
+  }
+  h1 {
+    font-size: 3.2rem;
+    margin: .3em 0;
+  }
+  ul {
+    padding-left: 4rem;
+    margin: 1.6rem 0;
+  }
+}
+
+@media screen and (min-width: 40.5em) {
+  .main {
+    padding: 1rem 5rem 0;
+    max-width: 66rem;
+    margin: 1.6rem auto 1.6rem;
+  }
+}
+
+.media {
+  display: block;
+  margin: 0 auto 1.6rem;
+}
+
+.photo {
+  background-image: url('../images/wilman_8bit_192x192.png');
+  background-origin: border-box;
+  width: $photo_size;
+  height: $photo_size;
+  border-radius: $photo_size / 2;
+  margin-bottom: 1.6rem;
+  border: 4px solid $zen-gray;
+  transition: all 0.5s ease-out;
+  &:hover {
+    background-image: url('../images/wilman_192x192.jpg');
+  }
+
+}
+
+footer {
+  color: $zen;
+  text-align: center;
+  line-height: 3.2;
+}
