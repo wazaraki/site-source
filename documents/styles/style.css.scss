@@ -17,7 +17,7 @@ $beige-zen: #F9F0CB;
 $zen-gray: #e3e2e1;
 $photo_size: 192px;
 
-* {
+*, *:before, *:after {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -32,6 +32,7 @@ html {
 
 body {
   height: 100%;
+  font-family: 'Lato', 'sans-serif';
   line-height: 1.5;
 }
 
@@ -71,12 +72,12 @@ a {
 }
 
 .description {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .nav {
   background: $zen-gray;
-  xbackground: $beige-zen;
+  height: 4rem;
   color: $zen;
 }
 
